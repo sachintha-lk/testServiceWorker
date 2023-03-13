@@ -29,7 +29,7 @@ const showCoffees = () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker
-      .register("../serviceWorker.js") // if its /serviceWorker.js the URL would be sachintha-lk.github.io/serviceWorker.js, not  sachintha-lk.github.io/tesetServiceWorker/serviceWorker.js
+      .register("/testServiceWorker/serviceWorker.js") // absolute path to make it work
       .then((res) => console.log("service worker registered"))
       .catch((err) => console.log("service worker not registered", err));
     
